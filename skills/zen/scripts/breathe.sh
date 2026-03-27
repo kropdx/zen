@@ -15,7 +15,13 @@ phase() {
 }
 
 echo ""
-echo "zen · 4x4 breathing"
+printf "Mini Zen Retreat: Guided 4x4 box breathing starting in: "
+for ((c = 10; c >= 1; c--)); do
+  printf "%d" "$c"
+  if ((c > 1)); then printf ", "; fi
+  sleep 1
+done
+echo ""
 echo ""
 
 for ((r = 1; r <= ROUNDS; r++)); do
