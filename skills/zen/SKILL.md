@@ -1,14 +1,15 @@
 ---
 name: dailyzen
 description: Return one randomly selected quote from 113 curated quotes.
-allowed-tools: Read
+allowed-tools: Read, Bash(node:*)
 ---
 
 # Daily Zen
 
-Read the quotes file at `${CLAUDE_SKILL_DIR}/quotes.json`. Pick one quote at random.
+Run this command to select a truly random quote:
 
-Display only this, nothing else:
+```bash
+node "${CLAUDE_PLUGIN_ROOT}/skills/zen/random-quote.js"
+```
 
-"<quote text>"
-— Author Name
+Display the command's stdout exactly, with no extra text.
