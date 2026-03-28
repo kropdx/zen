@@ -2,48 +2,72 @@
 name: zen
 description: Take a mindfulness break. Displays a random zen quote and guides you through a calming 4x4 breathing exercise right in your terminal. Use when you need to pause, reset, or decompress during a coding session.
 disable-model-invocation: true
-allowed-tools: Bash, Read
+allowed-tools: Read
 ---
 
 # Zen - A Mindfulness Break
 
-When invoked, do the following in order:
+When invoked, do the following in order. Output each section one at a time. Do not output everything at once.
 
-## Step 1: Display a Random Zen Quote
+## Step 1: Quote
 
 Read the quotes file at `${CLAUDE_SKILL_DIR}/quotes.json`. Pick one quote at random.
 
-Display it like this:
+Output only this:
 
-```
-"<quote text here>"
+"<quote text>"
+— Author Name
 
-  — Author Name
-```
+## Step 2: Countdown
 
-## Step 2: Breathing Exercise
+Output this text exactly, one line at a time, pausing between each:
 
-Run the entire breathing exercise using Bash `sleep` commands to control timing. Output each line one at a time using separate Bash calls or a single script with echo + sleep.
+Mini Zen Retreat
+Guided 4x4 box breathing starting in...
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
 
-First, display a countdown. Run this exact bash command:
+## Step 3: Breathing Rounds
 
-```bash
-for i in 10 9 8 7 6 5 4 3 2 1; do echo "$i"; sleep 1; done
-```
+Repeat the following 4 times (rounds 1 through 4).
 
-Then for each round (4 rounds total), run this exact bash command:
+Output one line at a time, pausing between each line:
 
-```bash
-echo "ROUND 1/4"; for phase in INHALE HOLD EXHALE HOLD; do for i in 1 2 3 4; do sleep 1; echo "$phase $i"; done; done
-```
+ROUND [n]/4
+INHALE 1
+INHALE 2
+INHALE 3
+INHALE 4
+HOLD 1
+HOLD 2
+HOLD 3
+HOLD 4
+EXHALE 1
+EXHALE 2
+EXHALE 3
+EXHALE 4
+HOLD 1
+HOLD 2
+HOLD 3
+HOLD 4
 
-Repeat for rounds 2, 3, and 4 (updating the round number each time).
+## Step 4: Close
 
-After all 4 rounds, say only: "Done. Welcome back."
+Output only: "Done. Welcome back."
 
-## Important
+## Rules
 
-- Do NOT add any extra text before, between, or after the breathing rounds
-- Do NOT summarize or explain what happened
+- Do NOT use any Bash commands
+- Do NOT add any extra commentary, explanation, or encouragement
+- Do NOT summarize what happened
 - Do NOT describe the benefits of breathing
-- Keep it minimal
+- Output each line individually with natural pausing between them
+- Keep it exactly as specified above, nothing more
