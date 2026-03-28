@@ -1,6 +1,6 @@
 ---
 name: dailyzen
-description: Display a random zen quote for a moment of clarity. Use when you need a brief pause or inspiration during a coding session.
+description: Return one randomly selected quote from 113 curated quotes.
 disable-model-invocation: true
 allowed-tools: Read
 ---

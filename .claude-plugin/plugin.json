@@ -1,12 +1,12 @@
 {
   "name": "dailyzen",
-  "description": "A random zen quote for developers. A moment of clarity in your terminal.",
+  "description": "A random inspirational quote in your terminal. A moment of clarity between commits.",
   "version": "2.0.0",
   "author": {
     "name": "kropdx"
   },
   "repository": "https://github.com/kropdx/DailyZen",
   "homepage": "https://github.com/kropdx/DailyZen",
-  "keywords": ["zen", "quotes", "mindfulness", "inspiration", "wellness"],
+  "keywords": ["zen", "quotes", "generator", "inspiration"],
   "license": "MIT"
 }

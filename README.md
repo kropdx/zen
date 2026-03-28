@@ -1,6 +1,6 @@
 # DailyZen
 
-A random zen quote in your terminal. A moment of clarity between commits.
+A random inspirational quote in your terminal. A moment of clarity between commits.
 
 ## Install
 
