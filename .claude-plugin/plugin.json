@@ -5,8 +5,8 @@
   "author": {
     "name": "kropdx"
   },
-  "repository": "https://github.com/kropdx/DailyZen",
-  "homepage": "https://github.com/kropdx/DailyZen",
+  "repository": "https://github.com/kropdx/dailyzen-skill",
+  "homepage": "https://github.com/kropdx/dailyzen-skill",
   "keywords": ["zen", "quotes", "generator", "inspiration"],
   "license": "MIT"
 }
